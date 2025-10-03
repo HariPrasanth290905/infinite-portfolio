@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Custom Color Property  */
+@theme {
+  --font-nightintokyo: "NightinTokyo", sans-serif;
+  --font-nightintokyo-bold: "NightinTokyo-Bold", sans-serif;
+  --font-nightintokyo-shadow: "NightinTokyo-Shadow", sans-serif;
+  --font-yusei: "Yusei magic", sans-serif;
+}
+
+@font-face {
+  font-family: "Yusei magic";
+  src: url(/fonts/yusei-magic.regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NightinTokyo";
+  src: url(/fonts/NightinTokyo.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NightinTokyo-Bold";
+  src: url(/fonts/NightinTokyo-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NightinTokyo-Shadow";
+  src: url(/fonts/NightinTokyoShadow.ttf) format("truetype");
+}
+
+@layer base {
+  body {
+    @apply bg-black font-sans text-white;
+  }
+}
+
+@layer components {
+  .enter {
+    
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  /* Guide Bar  */
+  .guide-bar {
+    @apply justify-center-safe top-0 p-4 gap-8 w-full fixed items-center sm:flex z-10 hidden;
+  }
+  .guide-bar li {
+    @apply hover:text-gray-400  text-lg;
+  }
+  .active {
+    @apply text-red-700 font-bold transition-all duration-200 text-xl;
+  }
+}
