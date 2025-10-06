@@ -33,8 +33,17 @@
 
 @layer components {
   .enter {
-    
+    background: radial-gradient(
+      ellipse at center,
+      rgb(73, 72, 72) 90%,
+      rgb(255, 255, 255) 40%,
+      rgba(255, 255, 255, 0.8) 100%
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
+
   .flex-center {
     @apply flex justify-center items-center;
   }

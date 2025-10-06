@@ -8,10 +8,10 @@ type ConvoProps = {
     name: string;
     msg: string;
     img: string;
+    bimg: string
     style?: {
       position: string;
       bubbleColor: string;
-      textColor: string;
     };
   };
   nextHandler: MouseEventHandler | undefined;
@@ -47,13 +47,17 @@ function Convo({ convo, nextHandler }: ConvoProps) {
   }, [nextHandler]);
 
   return (
-    <div className="relative h-screen grid place-items-center enter">
-      <div className={`flex flex-col md:flex-row h-fit py-8 rounded-4xl ${isLeft ? "" : "md:flex-row-reverse"} m-4`}>
+    <div className={`relative h-screen grid place-items-center enter`}
+      style={{
+        backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.9) 100%),url(${convo.bimg})`
+      }}
+    >
+      <div className={`flex flex-col md:flex-row h-fit py-8 rounded-4xl ${isLeft ? "" : "md:flex-row-reverse"} md:m-20 m-8`}>
 
         {/* Text Column */}
-        <div className="relative flex flex-col p-4 md:p-8 order-1 md:w-1/2">
+        <div className="relative flex flex-col p-4 order-1 md:w-1/2">
           {/* Name */}
-          <div className="absolute md:static self-center md:mb-auto mt-10 px- py-2 font-nightintokyo-bold text-4xl text-center md:text-5xl bg-white/10 rounded-2xl backdrop-blur-[4px]">
+          <div className="absolute md:static self-center md:mb-auto mt-10 px- py-2 font-nightintokyo-bold text-4xl text-center md:text-5xl bg-black/30 rounded-2xl backdrop-blur-[4px] p-4">
             <h1 ref={nameRef} style={{ color: convo.style?.bubbleColor }}>
               {convo.name}
             </h1>
@@ -66,11 +70,10 @@ function Convo({ convo, nextHandler }: ConvoProps) {
             style={{
               boxShadow: `0px 0px 5px 3px rgba(200,200,200,10)`,
               backgroundColor: convo.style?.bubbleColor,
-              color: convo.style?.textColor,
             }}
           >
             <p
-              className="font-yusei"
+              className="font-yusei text-black"
               ref={pgRef}>{convo.msg}</p>
           </div>
         </div>

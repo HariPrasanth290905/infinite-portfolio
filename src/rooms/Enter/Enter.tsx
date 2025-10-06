@@ -19,7 +19,11 @@ function Enter() {
           convo={enterConvo[idx]}
           nextHandler={handleNext}
         />) :<>
-        <h1>Welcome to the infinity castle</h1>
+        <div className="grid place-items-center h-screen text-6xl">
+          <h1 className="font-nightintokyo-shadow">
+            Welcome to infinity castle
+          </h1>
+        </div>
         </>
       }
     </section>
