@@ -40,9 +40,9 @@ const enterConvo = [
     name: "Tanjiro Kamado",
     msg: "Don’t be afraid, traveler! I’m Tanjiro — a Full-Stack Developer who crafts with care and precision. I’ll guide you through safely.",
     img: "/images/tanjiro.png",
-    bimg: "",
+    bimg: "/bimages/tanj.jpg",
     style: {
-      position: "right",
+      position: "left",
       bubbleColor: "#a4d2ee",
     },
   },
@@ -50,7 +50,7 @@ const enterConvo = [
     name: "Nezuko Kamado",
     msg: "I’m Nezuko! My touch brings beauty and creativity — every project polished and full of life, waiting for you to explore.",
     img: "/images/nezuko.jpg",
-    bimg: "/bimages/nezukob.png",
+    bimg: "/bimages/nezub.png",
     style: {
       position: "left",
       bubbleColor: "#f99f9c",
@@ -60,7 +60,7 @@ const enterConvo = [
     name: "Zenitsu Agatsuma",
     msg: "Lightning-fast and full of energy! My React apps spark with interactivity ⚡ You’ll see them shine as we go further!",
     img: "/images/zenitsu.jpg",
-    bimg: "/bimages/zenitsub.png",
+    bimg: "/bimages/zenb.png",
     style: {
       position: "right",
       bubbleColor: "#ffcd09",
@@ -70,7 +70,7 @@ const enterConvo = [
     name: "Inosuke Hashibira",
     msg: "Hah! The backend is mine! APIs, databases, Spring Boot — I tear through them like a beast to keep everything strong and fast!",
     img: "/images/inosuke.jpg",
-    bimg: "",
+    bimg: "/bimages/inosukeb.jpg",
     style: {
       position: "left",
       bubbleColor: "#aee1f6",
@@ -80,9 +80,9 @@ const enterConvo = [
     name: "Tanjiro Kamado",
     msg: "Together, we’ll overcome even Muzan’s darkness. Traveler, the portfolio awaits — are you ready?",
     img: "/images/tanjiro2.png",
-    bimg: "",
+    bimg: "/bimages/tanji.jpg",
     style: {
-      position: "right",
+      position: "left",
       bubbleColor: "#8aad89",
     },
   },

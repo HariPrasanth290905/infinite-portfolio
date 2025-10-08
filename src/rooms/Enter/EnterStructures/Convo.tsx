@@ -47,17 +47,24 @@ function Convo({ convo, nextHandler }: ConvoProps) {
   }, [nextHandler]);
 
   return (
-    <div className={`relative h-screen grid place-items-center enter`}
+    <div
+      className="relative h-screen grid place-items-center bg-cover bg-center"
       style={{
-        backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.9) 100%),url(${convo.bimg})`
+        backgroundImage: `radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,0.4) 0%, 
+      rgba(0,0,0,0.7) 60%, 
+      rgba(0,0,0,1) 100%
+    ), url(${convo.bimg})`
       }}
     >
-      <div className={`flex flex-col md:flex-row h-fit py-8 rounded-4xl ${isLeft ? "" : "md:flex-row-reverse"} md:m-20 m-8`}>
+
+      <div className={`flex flex-col md:flex-row py-12 rounded-4xl ${isLeft ? "" : "md:flex-row-reverse"} md:m-20 m-8 backdrop-blur-xs bg-white/20`}>
 
         {/* Text Column */}
-        <div className="relative flex flex-col p-4 order-1 md:w-1/2">
+        <div className="relative flex flex-col p-12 order-1 md:w-1/2">
           {/* Name */}
-          <div className="absolute md:static self-center md:mb-auto mt-10 px- py-2 font-nightintokyo-bold text-4xl text-center md:text-5xl bg-black/30 rounded-2xl backdrop-blur-[4px] p-4">
+          <div className="absolute md:static self-center md:mb-auto mt-10 py-2 font-nightintokyo-bold text-4xl text-center md:text-5xl ">
             <h1 ref={nameRef} style={{ color: convo.style?.bubbleColor }}>
               {convo.name}
             </h1>
@@ -79,12 +86,16 @@ function Convo({ convo, nextHandler }: ConvoProps) {
         </div>
 
         {/* Image Column */}
-        <div className="relative place-items-center md:w-1/2 h-64 md:h-full">
+        <div className="relative place-items-center md:w-1/2 h-64 md:h-full"
+        >
           <img
             ref={imgRef}
             src={convo.img}
             alt={convo.name}
             className="w-[300px] rounded-2xl h-[400px] md:w-[350px] mt-4 object-cover"
+            style={{
+            boxShadow: `0px 0px 5px 3px rgba(200,200,200,10)`
+          }}
           />
         </div>
       </div>
