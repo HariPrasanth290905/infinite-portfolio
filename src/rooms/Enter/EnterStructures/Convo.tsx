@@ -99,7 +99,7 @@ function Convo({ convo, nextHandler }: ConvoProps) {
         </div>
       </div>
 
-      {/* Fixed Next Button at Bottom Center */}
+      {/* Next Button for switching convo */}
       <div className="absolute bottom-10 left-1/2 transform-translate-x-1/2">
         <button
           className="px-6 py-2 italic text-gray-400 border-2 border-gray-600 rounded-xl hover:text-white hover:border-white transition"
