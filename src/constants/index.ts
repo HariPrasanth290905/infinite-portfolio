@@ -80,10 +80,10 @@ const enterConvo = [
     name: "Tanjiro Kamado",
     msg: "Together, we’ll overcome even Muzan’s darkness. Traveler, the portfolio awaits — are you ready?",
     img: "/images/tanjiro2.png",
-    bimg: "/bimages/tanji.jpg",
+    bimg: "/bimages/tanjiro.jpg",
     style: {
-      position: "left",
-      bubbleColor: "#8aad89",
+      position: "right",
+      bubbleColor: "#16d6c2",
     },
   },
 ];
