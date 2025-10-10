@@ -12,6 +12,7 @@ type ConvoProps = {
     style?: {
       position: string;
       bubbleColor: string;
+      boxShadow: string
     };
   };
   nextHandler: MouseEventHandler | undefined;
@@ -28,11 +29,11 @@ function Convo({ convo, nextHandler }: ConvoProps) {
 
   useGSAP(() => {
 
-
-    gsap.set([pgRef.current, nameRef.current, imgRef.current, paraRef.current], {
-      opacity: 1,
-      x: 0
-    });
+    gsap.set([pgRef.current, nameRef.current, imgRef.current, paraRef.current],
+      {
+        opacity: 1,
+        x: 0
+      });
 
     const tl = convoGsap({
       pgRef: pgRef.current,
@@ -50,7 +51,7 @@ function Convo({ convo, nextHandler }: ConvoProps) {
 
   return (
     <div
-      className="relative h-screen grid place-items-center bg-cover bg-center"
+      className="relative h-screen grid place-items-center bg-cover bg-center transition-opacity duration-300"
       style={{
         backgroundImage: `
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4))
@@ -58,9 +59,11 @@ function Convo({ convo, nextHandler }: ConvoProps) {
       }}
     >
 
-      <div className={`flex flex-col md:flex-row py-12 rounded-4xl ${isLeft ? "" : "md:flex-row-reverse"} md:m-20 m-8 backdrop-blur-xs bg-white/20`}>
+      <div className={`flex flex-col md:flex-row py-12 rounded-4xl ${isLeft ? "" : "md:flex-row-reverse"} md:m-20 m-8 backdrop-blur-xs bg-white/20`}
 
-        {/* Text Column */}
+      >
+
+        {/* Name & Convo section */}
         <div className="relative flex flex-col p-12 order-1 md:w-1/2">
           {/* Name */}
           <div className="absolute md:static self-center md:mb-auto mt-10 py-2 font-nightintokyo-bold text-4xl text-center md:text-5xl ">
@@ -71,10 +74,10 @@ function Convo({ convo, nextHandler }: ConvoProps) {
 
           {/* Speech Bubble */}
           <div
-            className="mt-40 md:mt-0 p-4 w-full rounded-xl  border-black border-[1px]"
+            className="mt-40 md:mt-0 p-4 w-full rounded-xl"
             ref={paraRef}
             style={{
-              boxShadow: `0px 0px 5px 3px ${convo.style?.bubbleColor}`,
+              boxShadow: `0px 0px 5px 3px ${convo.style?.boxShadow}`,
               backgroundColor: convo.style?.bubbleColor,
             }}
           >
@@ -85,13 +88,13 @@ function Convo({ convo, nextHandler }: ConvoProps) {
         </div>
 
         {/* Image Column */}
-        <div className="relative place-items-center md:w-1/2 h-64 md:h-full"
+        <div className="relative place-items-center md:w-1/2 h-64 md:h-full "
         >
           <img
             ref={imgRef}
             src={convo.img}
             alt={convo.name}
-            className="w-[300px] rounded-2xl h-[400px] md:w-[350px] mt-4 object-cover border-black border-[1px]"
+            className="w-[300px] rounded-2xl h-[400px] md:w-[350px] mt-4 object-cover"
             style={{
               boxShadow: `0px 0px 5px 3px ${convo.style?.bubbleColor}`
             }}

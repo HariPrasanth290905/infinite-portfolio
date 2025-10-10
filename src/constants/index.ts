@@ -34,6 +34,7 @@ const enterConvo = [
     style: {
       position: "right",
       bubbleColor: "rgb(169 134 218)",
+      boxShadow: "0 4px 12px rgba(130, 102, 168, 0.5)", // slightly darker and transparent
     },
   },
   {
@@ -44,6 +45,7 @@ const enterConvo = [
     style: {
       position: "left",
       bubbleColor: "#a4d2ee",
+      boxShadow: "0 4px 12px rgba(164, 210, 238, 0.5)", // subtle shadow
     },
   },
   {
@@ -54,16 +56,18 @@ const enterConvo = [
     style: {
       position: "left",
       bubbleColor: "#f99f9c",
+      boxShadow: "0 4px 12px rgba(249, 159, 156, 0.5)", // subtle shadow
     },
   },
   {
     name: "Zenitsu Agatsuma",
-    msg: "Lightning-fast and full of energy! My React apps spark with interactivity ⚡ You’ll see them shine as we go further!",
+    msg: "Lightning-fast and full of energy! My React apps spark with interactivity ⚡  You’ll see them shine as we go further!",
     img: "/images/zenitsu.jpg",
     bimg: "/bimages/zenb.png",
     style: {
       position: "right",
       bubbleColor: "#ffcd09",
+      boxShadow: "0 4px 12px rgba(255, 205, 9, 0.5)", // subtle shadow
     },
   },
   {
@@ -74,6 +78,7 @@ const enterConvo = [
     style: {
       position: "left",
       bubbleColor: "#aee1f6",
+      boxShadow: "0 4px 12px rgba(174, 225, 246, 0.5)", // subtle shadow
     },
   },
   {
@@ -84,6 +89,7 @@ const enterConvo = [
     style: {
       position: "right",
       bubbleColor: "#16d6c2",
+      boxShadow: "0 4px 12px rgba(22, 214, 194, 0.5)", // subtle shadow
     },
   },
 ];
